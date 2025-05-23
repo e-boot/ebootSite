@@ -1,18 +1,19 @@
-App.jsx
-import AboutSection from './components/sections/AboutSection.jsx';
-import HeroSection from './components/sections/HeroSection.jsx';
-import Navbar from './components/sections/Navbar.jsx';
-import { Box, Heading, Text, Button, useColorModeValue } from '@chakra-ui/react';
+
+import ProjectSection from './sections/ProjectSection.jsx';
+import AboutSection from './sections/AboutSection.jsx';
+import HeroSection from './sections/HeroSection.jsx';
+import Navbar from './sections/Navbar.jsx';
+
+
 
 function App() {
-    const bg = useColorModeValue('gray.100', 'gray.900');
-  const color = useColorModeValue('black', 'white');
+   
   return (
     <>
     <Navbar />
     <HeroSection />
     <AboutSection />
-
+    <ProjectSection/>
     </>
   );
 }

@@ -16,10 +16,7 @@ export default function AboutSection() {
   fontSize="md"
   color="gray.600"
   _dark={{ color: 'gray.400' }}
->
-  I transitioned into tech from a different background and found my passion in full-stack development. These days, I spend most of my time writing JavaScript and Java — building everything from web apps to command-line tools.
-
-  I’m especially like linux, i spend some time around my configuration files, my kind of fun.
+>I'm a junior full-stack developer looking for an opportunity to grow and contribute. I enjoy coding in general, but I primarily work with Java and JavaScript. I use Linux daily and love how customizable it is — tweaking and configuring everything.
 </Text>
       </Stack>
     </Box>

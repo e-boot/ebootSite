@@ -14,7 +14,6 @@ import { FaSun, FaMoon } from 'react-icons/fa';
 
 const Links = ['Projects', 'About'];
 
-// NavLink remains same but add onClick handler optionally if you want smooth scrolling
 const NavLink = ({ children, onClick }) => {
   const activeColor = useColorModeValue('gray.900', 'gray.300');
   return (
