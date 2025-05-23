@@ -6,16 +6,17 @@ export default function HeroSection() {
     <Box
       as="section"
       id="home"
+      scrollSnapAlign="start"
       minH= "100vh"
       display="flex"
       alignItems="center"
       justifyContent="center"
       px={4}
-      py={8}
+      py={{base:16, md: 20}}
       bg="gray.50"
       _dark={{ bg: 'gray.900' }}
     >
-      <Stack spacing={6} textAlign="center">
+      <Stack spacing={8} textAlign="center">
         <Heading size="2xl">
           Hey,<br/> I'm eboot.
         </Heading>

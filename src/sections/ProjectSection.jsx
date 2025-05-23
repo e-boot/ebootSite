@@ -22,17 +22,18 @@ const projects = [
 export default function ProjectSection() {
   return (
     <Box as="section" 
-    id="projects" 
-    py={20} 
+    id="projects"
+    scrollSnapAlign="start" 
+    py={{base:16, md: 20}} 
     px={6} 
     maxW="container.lg"
     minH= "100vh"
     mx="auto">
       <box w="full">
-      <Heading mb={10} textAlign="center">
+      <Heading mb={12} textAlign="center">
         Projects
       </Heading>
-      <SimpleGrid columns={{ base: 1, md: 2 }} spacing={8}>
+      <SimpleGrid columns={{ base: 1, md: 3 }} spacing={10}>
         {projects.map((project, i) => (
           <ProjectCard key={i} {...project} />
         ))}

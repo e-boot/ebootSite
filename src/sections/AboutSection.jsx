@@ -5,12 +5,13 @@ export default function AboutSection() {
     <Box
       as="section"
       id='about'
+      scrollSnapAlign="start"
       minH = "100vh"
        display="flex"
       alignItems="center"
       justifyContent="center"
-      py={8}
-      px={4}
+      py={{base: 16, md:20}}
+      px={6}
       bg="white"
       _dark={{ bg: 'gray.800' }}
     >
@@ -20,7 +21,7 @@ export default function AboutSection() {
   fontSize="md"
   color="gray.600"
   _dark={{ color: 'gray.400' }}
->I'm a junior full-stack developer looking for an opportunity to grow and contribute. I enjoy coding in general, but I primarily work with Java and JavaScript. I use Linux daily and love how customizable it is — tweaking and configuring everything.
+>I'm a junior full-stack developer, based in Portugal I enjoy coding in general, but I primarily work with Java and JavaScript. I use Linux daily and love how customizable it is — tweaking and configuring everything. . I'm looking for an opportunity to grow and contribute.
 </Text>
       </Stack>
     </Box>
