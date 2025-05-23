@@ -26,8 +26,9 @@ export default function ProjectSection() {
     py={20} 
     px={6} 
     maxW="container.lg"
-    max
+    minH= "100vh"
     mx="auto">
+      <box w="full">
       <Heading mb={10} textAlign="center">
         Projects
       </Heading>
@@ -36,6 +37,7 @@ export default function ProjectSection() {
           <ProjectCard key={i} {...project} />
         ))}
       </SimpleGrid>
+      </box>
     </Box>
   );
 }

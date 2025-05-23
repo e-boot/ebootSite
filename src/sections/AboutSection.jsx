@@ -5,7 +5,11 @@ export default function AboutSection() {
     <Box
       as="section"
       id='about'
-      py={16}
+      minH = "100vh"
+       display="flex"
+      alignItems="center"
+      justifyContent="center"
+      py={8}
       px={4}
       bg="white"
       _dark={{ bg: 'gray.800' }}

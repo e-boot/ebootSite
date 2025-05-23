@@ -6,12 +6,12 @@ export default function HeroSection() {
     <Box
       as="section"
       id="home"
-      minHeight={{ base: "100vh", md: "60vh" }}
+      minH= "100vh"
       display="flex"
       alignItems="center"
       justifyContent="center"
       px={4}
-      py={4}
+      py={8}
       bg="gray.50"
       _dark={{ bg: 'gray.900' }}
     >
