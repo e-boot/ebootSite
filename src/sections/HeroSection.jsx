@@ -1,5 +1,6 @@
-import { Box, Heading, Stack, HStack, IconButton, Link, Tooltip } from '@chakra-ui/react';
-import { FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa';
+import { Box, Heading, Stack } from '@chakra-ui/react';
+
+import Socials from '../components/Socials.jsx';
 
 export default function HeroSection() {
   return (
@@ -17,51 +18,18 @@ export default function HeroSection() {
       _dark={{ bg: 'gray.900' }}
     >
       <Stack spacing={8} textAlign="center">
-        <Heading size="2xl">
-          Hey,<br/> I'm eboot.
+        <Heading 
+            size="4xl" 
+            fontWeight="extrabold" 
+            letterSpacing="tight" 
+            mb={4}
+            lineHeight="1.1"
+            _dark={{ textShadow: '0 0 5px rgba(0, 128, 128, 0.7)'}}
+            >
+          Hi, I'm eboot.
         </Heading>
         
-        <HStack spacing={4} justify="center">
-          <Tooltip label="GitHub" hasArrow>
-            <Link href="https://github.com/e-boot" isExternal>
-              <IconButton
-                icon={<FaGithub />}
-                aria-label="GitHub"
-                variant="ghost"
-                size="lg"
-                _hover={{ color: 'teal.500' }}
-                color="gray.600"
-                _dark={{ color: 'gray.400', _hover: { color: 'teal.300' } }}
-              />
-            </Link>
-          </Tooltip>
-          <Tooltip label="LinkedIn" hasArrow>
-            <Link href="https://linkedin.com/in/eliobotas" isExternal>
-              <IconButton
-                icon={<FaLinkedin />}
-                aria-label="LinkedIn"
-                variant="ghost"
-                size="lg"
-                _hover={{ color: 'teal.500' }}
-                color="gray.600"
-                _dark={{ color: 'gray.400', _hover: { color: 'teal.300' } }}
-              />
-            </Link>
-          </Tooltip>
-          <Tooltip label="Email" hasArrow>
-            <Link href="mailto:eliobotas@gmail.com">
-              <IconButton
-                icon={<FaEnvelope />}
-                aria-label="Email"
-                variant="ghost"
-                size="lg"
-                _hover={{ color: 'teal.500' }}
-                color="gray.600"
-                _dark={{ color: 'gray.400', _hover: { color: 'teal.300' } }}
-              />
-            </Link>
-          </Tooltip>
-        </HStack>
+     <Socials />
       </Stack>
     </Box>
   );
