@@ -1,6 +1,8 @@
-import { Box, Heading, Text, Stack, Avatar } from '@chakra-ui/react';
+import { Box, Heading, Text, Stack, Avatar, useColorModeValue } from '@chakra-ui/react';
 
 export default function AboutSection() {
+  const bg = useColorModeValue('background.light, background.dark');
+
   return (
     <Box
       as="section"
@@ -11,8 +13,7 @@ export default function AboutSection() {
       justifyContent="center"
       py={8}
       px={4}
-      bg="white"
-      _dark={{ bg: 'gray.800' }}
+      bg={bg}
       scrollSnapAlign="start"
     >
       <Stack spacing={6} maxW="2xl" mx="auto" textAlign="center">
@@ -20,17 +21,18 @@ export default function AboutSection() {
           size="2xl"
           fontWeight="extrabold"
           letterSpacing="wide"
-          color= "teal.200"
+          color= "accent.800"
+          _dark={{color: "accent.500"}}
         >
           About Me
         </Heading>
    <Text
   fontSize={{base: 'md' , md:'lg'}}
   color="gray.700"
-  _dark={{ color: 'gray.300' }}
+  _dark={{ color:"gray.400" }}
   lineHeight="tall"
   letterSpacing="wide"
-  fontWeight="medium"
+  fontWeight="small"
 >
  I'm a junior full-stack developer based in Portugal.
 I enjoy coding and learning — I've been grinding and will keep at it.

@@ -1,15 +1,15 @@
-import { Box, Heading, SimpleGrid } from '@chakra-ui/react';
+import { Box, Heading, SimpleGrid, useColorModeValue } from '@chakra-ui/react';
 import ProjectCard from '../components/ProjectCard.jsx'
 
 const projects = [
   {
-    title: 'This personal website',
-    description: 'A responsive website built with React and Chakra UI.',
+    title: 'This site',
+    description:'this site guithub. Built with React and Chakra UI.',
     link: 'https://github.com/e-boot/ebootSite',
   },
   {
     title: 'ecryptor',
-    description:'CLI Tool for file encryption',
+    description:'CLI Tool for file encryption built with Java.',
     link: 'https://github.com/e-boot/ecryptor',
   },
   {
@@ -20,6 +20,7 @@ const projects = [
 ];
 
 export default function ProjectSection() {
+   const bg = useColorModeValue('background.light, background.dark');
   return (
     <Box as="section" 
       id="projects"
@@ -28,7 +29,9 @@ export default function ProjectSection() {
       px={6} 
       maxW="container.lg"
       minH= "100vh"
-      mx="auto">
+      mx="auto"
+      bg={bg}
+    >
     <Box w="full">
         <Heading 
       mb={12} 
@@ -37,7 +40,8 @@ export default function ProjectSection() {
       fontWeight="extrabold"
       letterSpacing="tight"
       lineHeight="short"
-        color= "teal.300"
+        color= "accent.800"
+        _dark={{color:"accent.300"}}
       >
         Projects
       </Heading>

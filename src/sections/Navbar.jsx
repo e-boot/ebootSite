@@ -15,7 +15,7 @@ import { FaSun, FaMoon } from 'react-icons/fa';
 const Links = ['Projects', 'About'];
 
 const NavLink = ({ children, onClick }) => {
-  const activeColor = useColorModeValue('gray.900', 'gray.300');
+  const bg = useColorModeValue('background.light, background.dark');
   return (
     <Link
       px={3}
@@ -25,8 +25,9 @@ const NavLink = ({ children, onClick }) => {
       color={useColorModeValue('gray.700', 'gray.400')}
       _hover={{
         textDecoration: 'none',
-        bg: useColorModeValue('gray.200', 'gray.700'),
-        color: activeColor,
+        bg:{bg},
+        color: "accent.800",
+        _dark:"accent.400"
       }}
       href={`#${children.toLowerCase()}`}
       onClick={onClick}
@@ -37,6 +38,7 @@ const NavLink = ({ children, onClick }) => {
 };
 
 export default function Navbar() {
+   const bg = useColorModeValue('background.light, background.dark');
   const { isOpen, onOpen, onClose } = useDisclosure();
   const { colorMode, toggleColorMode } = useColorMode();
 
@@ -46,10 +48,10 @@ export default function Navbar() {
   };
 
   return (
+    
     <Box
     as="nav"
-      bg="whiteAlpha.800"
-      _dark={{bg:"gray.900", backdropFilter:"blur(10px)"}}
+      bg={bg}
       px={6}
       boxShadow="sm"
       position="sticky"
@@ -66,10 +68,10 @@ export default function Navbar() {
         <Box
           fontWeight="extrabold"
           fontSize="xl"
-          color="teal.300"
+          color="accent.800"
+          _dark={{color:"accent.400"}}
           letterSpacing="wide"
           cursor="pointer"
-          _hover={{ color:"teal.100" }}
           as="a"
           href="#home"
         >
@@ -90,9 +92,9 @@ export default function Navbar() {
             icon={colorMode === 'light' ? <FaMoon /> : <FaSun />}
             aria-label="Toggle Dark Mode"
             onClick={toggleColorMode}
-            color="teal.200"
-            bg="transparent"
-            _hover={{ color: 'teal.100' }}
+            color="accent.800"
+            _dark={{color:"accent.400"}}
+            bg={bg}
           />
 
           {/* Hamburger only on mobile */}
@@ -102,9 +104,9 @@ export default function Navbar() {
             aria-label="Toggle Menu"
             display={{ md: 'none' }}
             onClick={isOpen ? onClose : onOpen}
-            color={useColorModeValue('gray.900', 'gray.100')}
-            bg="transparent"
-            _hover={{ bg: useColorModeValue('gray.300', 'gray.700') }}
+            color= "accent.800"
+            _dark={{color:"accent.400"}}
+            bg={bg}
           />
         </Flex>
       </Flex>
@@ -114,7 +116,7 @@ export default function Navbar() {
         <Box
           pb={4}
           display={{ md: 'none' }}
-          bg={useColorModeValue('gray.200', 'gray.800')}
+          bg={bg}
         >
           <Stack as="nav" spacing={3} px={4}>
             {Links.map((link) => (

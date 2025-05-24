@@ -7,41 +7,41 @@ export default function Socials(){
         <>
                <HStack spacing={4} justify="center">
           <Tooltip label="GitHub" hasArrow>
-            <Link color="teal.400" _hover={{color:"teal.300"}} href="https://github.com/e-boot" isExternal>
+            <Link href="https://github.com/e-boot" isExternal>
               <IconButton
                 icon={<FaGithub />}
                 aria-label="GitHub"
                 variant="ghost"
                 size="lg"
-                _hover={{ color: 'teal.500' }}
-                color="gray.600"
-                _dark={{ color: 'gray.400', _hover: { color: 'teal.300' } }}
+               color= "accent.800"
+                _hover={{ color: 'accent.400' }}
+                _dark={{ color: 'accent.400', _hover: { color: 'accent.800' } }}
               />
             </Link>
           </Tooltip>
           <Tooltip label="LinkedIn" hasArrow>
-            <Link  color="teal.400" _hover={{color:"teal.300"}} href="https://linkedin.com/in/eliobotas" isExternal>
+            <Link  href="https://linkedin.com/in/eliobotas" isExternal>
               <IconButton
                 icon={<FaLinkedin />}
                 aria-label="LinkedIn"
                 variant="ghost"
                 size="lg"
-                _hover={{ color: 'teal.500' }}
-                color="gray.600"
-                _dark={{ color: 'gray.400', _hover: { color: 'teal.300' } }}
+                color= "accent.800"
+                _hover={{ color: 'accent.400' }}
+                _dark={{ color: 'accent.400', _hover: { color: 'accent.800' } }}
               />
             </Link>
           </Tooltip>
           <Tooltip label="Email" hasArrow>
-            <Link  color="teal.400" _hover={{color:"teal.300"}} href="mailto:eliobotas@gmail.com">
+            <Link  href="mailto:eliobotas@gmail.com">
               <IconButton
                 icon={<FaEnvelope />}
                 aria-label="Email"
                 variant="ghost"
                 size="lg"
-                _hover={{ color: 'teal.500' }}
-                color="gray.600"
-                _dark={{ color: 'gray.400', _hover: { color: 'teal.300' } }}
+               color= "accent.800"
+                _hover={{ color: 'accent.400' }}
+                _dark={{ color: 'accent.400', _hover: { color: 'accent.800' } }}
                 
               />
             </Link>
