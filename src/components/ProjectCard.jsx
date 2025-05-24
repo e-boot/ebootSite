@@ -1,7 +1,7 @@
 import { Box, Heading, Text, Stack, Link, useColorModeValue } from '@chakra-ui/react';
 
 export default function ProjectCard({ title, description, link }) {
-   const bg = useColorModeValue('background.light, background.dark');
+  const bg = useColorModeValue('background.light', 'background.dark');
   
   return (
     <Box

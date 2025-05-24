@@ -3,7 +3,7 @@ import { Box, Heading, Stack, useColorModeValue } from '@chakra-ui/react';
 import Socials from '../components/Socials.jsx';
 
 export default function HeroSection() {
-   const bg = useColorModeValue('background.light, background.dark');
+  const bg = useColorModeValue('background.light', 'background.dark');
   return (
     <Box
       as="section"

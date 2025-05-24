@@ -15,17 +15,17 @@ import { FaSun, FaMoon } from 'react-icons/fa';
 const Links = ['Projects', 'About'];
 
 const NavLink = ({ children, onClick }) => {
-  const bg = useColorModeValue('background.light, background.dark');
+  const bg = useColorModeValue('background.light', 'background.dark');
   return (
     <Link
       px={3}
       py={2}
+      bg={bg}
       rounded="md"
       fontWeight="medium"
       color={useColorModeValue('gray.700', 'gray.400')}
       _hover={{
         textDecoration: 'none',
-        bg:{bg},
         color: "accent.800",
         _dark:"accent.400"
       }}
@@ -38,7 +38,7 @@ const NavLink = ({ children, onClick }) => {
 };
 
 export default function Navbar() {
-   const bg = useColorModeValue('background.light, background.dark');
+  const bg = useColorModeValue('background.light', 'background.dark');
   const { isOpen, onOpen, onClose } = useDisclosure();
   const { colorMode, toggleColorMode } = useColorMode();
 
@@ -97,17 +97,6 @@ export default function Navbar() {
             bg={bg}
           />
 
-          {/* Hamburger only on mobile */}
-          <IconButton
-            size="md"
-            icon={isOpen ? <CloseIcon /> : <HamburgerIcon />}
-            aria-label="Toggle Menu"
-            display={{ md: 'none' }}
-            onClick={isOpen ? onClose : onOpen}
-            color= "accent.800"
-            _dark={{color:"accent.400"}}
-            bg={bg}
-          />
         </Flex>
       </Flex>
 

@@ -21,10 +21,10 @@ const theme = extendTheme({
       800: "#155E75",
       900: "#164E63",
     },
-      backgrounds: {
-      light: "#f9fafb",
+    background: {
+      light: "#e5e7eb",
       dark: "#121212",
-    },
+},
   }
 
 

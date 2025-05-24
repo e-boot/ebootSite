@@ -1,7 +1,7 @@
 import { Box, Heading, Text, Stack, Avatar, useColorModeValue } from '@chakra-ui/react';
 
 export default function AboutSection() {
-  const bg = useColorModeValue('background.light, background.dark');
+const bg = useColorModeValue('background.light', 'background.dark');
 
   return (
     <Box
