@@ -20,19 +20,22 @@ export default function AboutSection() {
           size="2xl"
           fontWeight="extrabold"
           letterSpacing="wide"
-          color= "teal.500"
+          color= "teal.200"
         >
           About Me
         </Heading>
    <Text
   fontSize={{base: 'md' , md:'lg'}}
-  color="gray.600"
+  color="gray.700"
   _dark={{ color: 'gray.300' }}
   lineHeight="tall"
   letterSpacing="wide"
   fontWeight="medium"
 >
-  I'm a junior full-stack developer, based in Portugal I enjoy coding in general, but I primarily work with Java and JavaScript. I use Linux daily and love how customizable it is — tweaking and configuring everything. . I'm looking for an opportunity to grow and contribute.
+ I'm a junior full-stack developer based in Portugal.
+I enjoy coding and learning — I've been grinding and will keep at it.
+I mostly work with Java and JavaScript, and I'm a Linux enthusiast who loves customizing everything.<br/>
+I'm looking for an opportunity to grow and contribute.
 </Text>
       </Stack>
     </Box>

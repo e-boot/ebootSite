@@ -30,13 +30,14 @@ export default function ProjectSection() {
       minH= "100vh"
       mx="auto">
     <Box w="full">
-      <Heading 
+        <Heading 
       mb={12} 
       textAlign="center"
-      fontSize={{base:'3x1', md:'4x1'}}
+      fontSize={{base:'4x1', md:'6x1'}}
       fontWeight="extrabold"
       letterSpacing="tight"
-      lineHeight="1.2"
+      lineHeight="short"
+        color= "teal.300"
       >
         Projects
       </Heading>

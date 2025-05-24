@@ -40,15 +40,16 @@ export default function Navbar() {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const { colorMode, toggleColorMode } = useColorMode();
 
-  // Optional: Smooth scroll function to close mobile menu on link click and scroll smoothly
+  
   const handleNavLinkClick = () => {
     if (isOpen) onClose();
-    // optionally scroll smoothly - modern browsers handle this via CSS (scroll-behavior: smooth)
   };
 
   return (
     <Box
-      bg={useColorModeValue('gray.100', 'gray.900')}
+    as="nav"
+      bg="whiteAlpha.800"
+      _dark={{bg:"gray.900", backdropFilter:"blur(10px)"}}
       px={6}
       boxShadow="sm"
       position="sticky"
@@ -65,10 +66,10 @@ export default function Navbar() {
         <Box
           fontWeight="extrabold"
           fontSize="xl"
-          color={useColorModeValue('gray.900', 'gray.100')}
+          color="teal.300"
           letterSpacing="wide"
           cursor="pointer"
-          _hover={{ opacity: 0.8 }}
+          _hover={{ color:"teal.100" }}
           as="a"
           href="#home"
         >
@@ -89,9 +90,9 @@ export default function Navbar() {
             icon={colorMode === 'light' ? <FaMoon /> : <FaSun />}
             aria-label="Toggle Dark Mode"
             onClick={toggleColorMode}
-            color={useColorModeValue('gray.900', 'gray.100')}
+            color="teal.200"
             bg="transparent"
-            _hover={{ bg: useColorModeValue('gray.300', 'gray.700') }}
+            _hover={{ color: 'teal.100' }}
           />
 
           {/* Hamburger only on mobile */}

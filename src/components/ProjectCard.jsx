@@ -17,11 +17,13 @@ export default function ProjectCard({ title, description, link }) {
             {description}
         </Text>
         <Link
+        
           href={link}
-          color="teal.500"
+          color="teal.400" 
+          _hover={{color:"teal.300"}}
           fontWeight="medium"
           isExternal
-          _hover={{ textDecoration: 'underline' }}
+          
         >
           View Project →
         </Link>

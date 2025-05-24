@@ -7,7 +7,7 @@ export default function Socials(){
         <>
                <HStack spacing={4} justify="center">
           <Tooltip label="GitHub" hasArrow>
-            <Link href="https://github.com/e-boot" isExternal>
+            <Link color="teal.400" _hover={{color:"teal.300"}} href="https://github.com/e-boot" isExternal>
               <IconButton
                 icon={<FaGithub />}
                 aria-label="GitHub"
@@ -20,7 +20,7 @@ export default function Socials(){
             </Link>
           </Tooltip>
           <Tooltip label="LinkedIn" hasArrow>
-            <Link href="https://linkedin.com/in/eliobotas" isExternal>
+            <Link  color="teal.400" _hover={{color:"teal.300"}} href="https://linkedin.com/in/eliobotas" isExternal>
               <IconButton
                 icon={<FaLinkedin />}
                 aria-label="LinkedIn"
@@ -33,7 +33,7 @@ export default function Socials(){
             </Link>
           </Tooltip>
           <Tooltip label="Email" hasArrow>
-            <Link href="mailto:eliobotas@gmail.com">
+            <Link  color="teal.400" _hover={{color:"teal.300"}} href="mailto:eliobotas@gmail.com">
               <IconButton
                 icon={<FaEnvelope />}
                 aria-label="Email"

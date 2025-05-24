@@ -23,8 +23,8 @@ export default function HeroSection() {
             fontWeight="extrabold" 
             letterSpacing="tight" 
             mb={4}
-            lineHeight="1.1"
-            _dark={{ textShadow: '0 0 5px rgba(0, 128, 128, 0.7)'}}
+            color="teal.400"
+            _dark={{ textShadow: '0 0 5px rgba(0, 128, 128, 0.7)', color:"teal.300"}}
             >
           Hi, I'm eboot.
         </Heading>
