@@ -13,9 +13,7 @@ export default function Socials(){
                 aria-label="GitHub"
                 variant="ghost"
                 size="lg"
-               color= "accent.800"
-                _hover={{ color: 'accent.400' }}
-                _dark={{ color: 'accent.400', _hover: { color: 'accent.800' } }}
+               color= "text"
               />
             </Link>
           </Tooltip>
@@ -26,9 +24,7 @@ export default function Socials(){
                 aria-label="LinkedIn"
                 variant="ghost"
                 size="lg"
-                color= "accent.800"
-                _hover={{ color: 'accent.400' }}
-                _dark={{ color: 'accent.400', _hover: { color: 'accent.800' } }}
+                color= "text"
               />
             </Link>
           </Tooltip>
@@ -39,9 +35,7 @@ export default function Socials(){
                 aria-label="Email"
                 variant="ghost"
                 size="lg"
-               color= "accent.800"
-                _hover={{ color: 'accent.400' }}
-                _dark={{ color: 'accent.400', _hover: { color: 'accent.800' } }}
+               color= "text"
                 
               />
             </Link>

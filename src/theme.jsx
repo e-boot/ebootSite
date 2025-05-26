@@ -1,33 +1,40 @@
 import { extendTheme } from '@chakra-ui/react';
 
-const theme = extendTheme({ 
+
+
+const theme = extendTheme({
   config: {
-    initialColorMode :'dark',
+    initialColorMode: 'dark',
     useSystemColorMode: false,
   },
-  fonts:{
+  fonts: {
     heading: `'Syne', sans-serif`,
     body: `'Roboto', sans-serif`,
   },
   colors: {
     primary: {
-      50: "#e3f9f9",
-      100: "#c8eff1",
-      200: "#9de3e6",
-      300: "#6fd7dc",
-      400: "#41cbd2",
-      500: "#28b1b9",
-      600: "#1f8a8f",
-      700: "#166365",
-      800: "#0d3d3c",
-      900: "#031717"
+      50: "#e0f2ff",  // very light blue
+      100: "#b3daff",
+      200: "#80c1ff",
+      300: "#4da9ff",
+      400: "#1a90ff",
+      500: "#0077e6",  // main blue
+      600: "#005bb5",
+      700: "#004488",
+      800: "#002f5c",
+      900: "#001c33",
     },
 
     background: {
-      light: "#e5e7eb",
-      dark: "#121212",
-},
-     },
+      light: "#f0f7ff",  // soft very light blue-gray
+      dark: "#0a1e3d",   // dark navy-blue
+    },
+
+    text: {
+      light: "#1a202c",  // dark gray-blue (almost black)
+      dark: "#e0e7ff",   // light bluish text for dark bg
+    },
+  },
 
   semanticTokens: {
     colors: {
@@ -36,16 +43,16 @@ const theme = extendTheme({
         _dark: "background.dark",
       },
       text: {
-        default: "gray.800",
-        _dark: "gray.100",
+        default: "text.light",
+        _dark: "text.dark",
       },
-      primary : {
-        default: "primary",
+      primary: {
+        default: "primary.500",
         _dark: "primary.300",
-      }
-    }
-  }
-
- });
+      },
+    },
+  },
+});
 
 export default theme;
+
