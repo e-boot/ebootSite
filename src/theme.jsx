@@ -10,21 +10,6 @@ const theme = extendTheme({
     body: `'Roboto', sans-serif`,
   },
   colors: {
-    accent: {
-      100: "#CFFAFE",
-      200: "#A5F3FC",
-      300: "#67E8F9",
-      400: "#22D3EE",
-      500: "#06B6D4",
-      600: "#0891B2",
-      700: "#0E7490",
-      800: "#155E75",
-      900: "#164E63",
-    },
-    background: {
-      light: "#e5e7eb",
-      dark: "#121212",
-},
     primary: {
       50: "#e3f9f9",
       100: "#c8eff1",
@@ -36,8 +21,13 @@ const theme = extendTheme({
       700: "#166365",
       800: "#0d3d3c",
       900: "#031717"
-    }
-  },
+    },
+
+    background: {
+      light: "#e5e7eb",
+      dark: "#121212",
+},
+     },
 
   semanticTokens: {
     colors: {
