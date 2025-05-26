@@ -15,21 +15,14 @@ import ColorModeToggle from "../components/ColorModeToggle";
 const Links = ['Projects', 'About'];
 
 const NavLink = ({ children, onClick }) => {
-  const bg = useColorModeValue('background.light', 'background.dark');
-  const color = useColorModeValue('gray.700', 'gray.400');
   return (
     <Link
       px={3}
       py={2}
-      bg={bg}
+      bg="bg"
       rounded="md"
       fontWeight="medium"
-      color={color}
-      _hover={{
-        textDecoration: 'none',
-        color: "accent.800",
-        _dark:"accent.400"
-      }}
+      color="text"
       href={`#${children.toLowerCase()}`}
       onClick={onClick}
     >
@@ -51,7 +44,7 @@ export default function Navbar() {
     
     <Box
     as="nav"
-      bg={bg}
+      bg="bg"
       px={6}
       boxShadow="sm"
       position="sticky"
@@ -68,8 +61,7 @@ export default function Navbar() {
         <Box
           fontWeight="extrabold"
           fontSize="xl"
-          color="accent.800"
-          _dark={{color:"accent.400"}}
+          color="text"
           letterSpacing="wide"
           cursor="pointer"
           as="a"

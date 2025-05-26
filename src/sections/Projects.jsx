@@ -1,4 +1,4 @@
-import { Box, Heading, SimpleGrid, useColorModeValue } from '@chakra-ui/react';
+import { Box, Heading, SimpleGrid } from '@chakra-ui/react';
 import ProjectCard from '../components/ProjectCard.jsx'
 
 const projects = [
@@ -19,8 +19,7 @@ const projects = [
   },
 ];
 
-export default function ProjectSection() {
-   const bg = useColorModeValue('background.light, background.dark');
+export default function Projects() {
   return (
     <Box as="section" 
       id="projects"
@@ -30,7 +29,7 @@ export default function ProjectSection() {
       maxW="container.lg"
       minH= "100vh"
       mx="auto"
-      bg={bg}
+      bg="bg"
     >
     <Box w="full">
         <Heading 
@@ -40,8 +39,7 @@ export default function ProjectSection() {
       fontWeight="extrabold"
       letterSpacing="tight"
       lineHeight="short"
-        color= "accent.800"
-        _dark={{color:"accent.300"}}
+        color="text"
       >
         Projects
       </Heading>
