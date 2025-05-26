@@ -2,20 +2,21 @@ import {
   Box,
   Flex,
   HStack,
-  IconButton,
   Stack,
   Link,
   useDisclosure,
-  useColorMode,
   useColorModeValue,
+  IconButton
 } from '@chakra-ui/react';
 import { HamburgerIcon, CloseIcon } from '@chakra-ui/icons';
-import { FaSun, FaMoon } from 'react-icons/fa';
+import ColorModeToggle from "../components/ColorModeToggle";
+
 
 const Links = ['Projects', 'About'];
 
 const NavLink = ({ children, onClick }) => {
   const bg = useColorModeValue('background.light', 'background.dark');
+  const color = useColorModeValue('gray.700', 'gray.400');
   return (
     <Link
       px={3}
@@ -23,7 +24,7 @@ const NavLink = ({ children, onClick }) => {
       bg={bg}
       rounded="md"
       fontWeight="medium"
-      color={useColorModeValue('gray.700', 'gray.400')}
+      color={color}
       _hover={{
         textDecoration: 'none',
         color: "accent.800",
@@ -40,8 +41,7 @@ const NavLink = ({ children, onClick }) => {
 export default function Navbar() {
   const bg = useColorModeValue('background.light', 'background.dark');
   const { isOpen, onOpen, onClose } = useDisclosure();
-  const { colorMode, toggleColorMode } = useColorMode();
-
+  
   
   const handleNavLinkClick = () => {
     if (isOpen) onClose();
@@ -78,41 +78,35 @@ export default function Navbar() {
           eboot
         </Box>
 
-        {/* Hide links on desktop */}
-        <HStack spacing={4} display={{ base: 'none', md: 'none' }}>
+       
+        {/* Hamburger for mobile */}
+        <IconButton
+          size="md"
+          icon={isOpen ? <CloseIcon /> : <HamburgerIcon />}
+          aria-label="Toggle Navigation"
+          display={{ md: 'none' }}
+          onClick={isOpen ? onClose : onOpen}
+        />
+
+        {/* Desktop links */}
+        <HStack spacing={4} display={{ base: 'none', md: 'flex' }}>
           {Links.map((link) => (
             <NavLink key={link}>{link}</NavLink>
           ))}
+          <ColorModeToggle />
         </HStack>
-
-        <Flex alignItems="center" gap={2}>
-          {/* Dark mode toggle always visible */}
-          <IconButton
-            size="md"
-            icon={colorMode === 'light' ? <FaMoon /> : <FaSun />}
-            aria-label="Toggle Dark Mode"
-            onClick={toggleColorMode}
-            color="accent.800"
-            _dark={{color:"accent.400"}}
-            bg={bg}
-          />
-
-        </Flex>
       </Flex>
 
-      {/* Mobile menu: show nav links */}
+      {/* Mobile links */}
       {isOpen && (
-        <Box
-          pb={4}
-          display={{ md: 'none' }}
-          bg={bg}
-        >
+        <Box pb={4} display={{ md: 'none' }}>
           <Stack as="nav" spacing={3} px={4}>
             {Links.map((link) => (
               <NavLink key={link} onClick={handleNavLinkClick}>
                 {link}
               </NavLink>
             ))}
+            <ColorModeToggle />
           </Stack>
         </Box>
       )}
