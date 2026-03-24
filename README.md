@@ -1,8 +1,25 @@
-# My Pesonal website - eboot
+# eboot.dev
 
+My personal portfolio website.
 
-Build using:
--HTML
+## 🚀 Tech Stack
+
+- HTML
+- CSS
 - JavaScript
-- Css
-- Chakra-ui
+
+## 📦 Features
+
+- Responsive design
+- Project showcase
+- Contact section
+
+## 🔗 Live Demo
+
+https://your-site-link.com
+
+## 🛠️ Setup
+
+```bash
+git clone https://github.com/e-boot/ebootSite.git
+```
